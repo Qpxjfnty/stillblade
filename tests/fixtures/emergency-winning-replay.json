@@ -1,0 +1,122 @@
+{
+  "scenario": "emergency",
+  "expected": {
+    "phase": "victory",
+    "beats": 15,
+    "actions": 23,
+    "hp": 1,
+    "kills": 2,
+    "wounds": 3
+  },
+  "commands": [
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "W"
+    },
+    {
+      "kind": "end"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 5,
+        "y": 3
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "W"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 7,
+        "y": 1
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "G"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 7,
+        "y": 2
+      }
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 8,
+        "y": 1
+      }
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "G"
+    },
+    {
+      "kind": "end"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 7,
+        "y": 1
+      }
+    },
+    {
+      "kind": "wait"
+    },
+    {
+      "kind": "wait"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 8,
+        "y": 2
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "W"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 9,
+        "y": 1
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "W"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 8,
+        "y": 2
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "W"
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "W"
+    }
+  ]
+}

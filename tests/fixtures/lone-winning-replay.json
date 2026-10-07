@@ -1,0 +1,40 @@
+{
+  "scenario": "lone",
+  "expected": {
+    "phase": "victory",
+    "beats": 3,
+    "actions": 5,
+    "hp": 4,
+    "kills": 1,
+    "wounds": 1
+  },
+  "commands": [
+    {
+      "kind": "parry",
+      "target": "S",
+      "to": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "S"
+    },
+    {
+      "kind": "parry",
+      "target": "S",
+      "to": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "S"
+    }
+  ]
+}

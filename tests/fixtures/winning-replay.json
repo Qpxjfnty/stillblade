@@ -1,0 +1,228 @@
+{
+  "scenario": "arena",
+  "expected": {
+    "phase": "victory",
+    "beats": 22,
+    "actions": 38,
+    "hp": 4,
+    "kills": 6,
+    "wounds": 7
+  },
+  "commands": [
+    {
+      "kind": "slip",
+      "to": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 6,
+        "y": 4
+      }
+    },
+    {
+      "kind": "vault",
+      "to": {
+        "x": 6,
+        "y": 6
+      }
+    },
+    {
+      "kind": "parry",
+      "target": "E2",
+      "to": {
+        "x": 6,
+        "y": 6
+      }
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "E2"
+    },
+    {
+      "kind": "shot",
+      "target": "E3"
+    },
+    {
+      "kind": "end"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 6,
+        "y": 6
+      }
+    },
+    {
+      "kind": "parry",
+      "target": "E1",
+      "to": {
+        "x": 6,
+        "y": 6
+      }
+    },
+    {
+      "kind": "vault",
+      "to": {
+        "x": 4,
+        "y": 4
+      }
+    },
+    {
+      "kind": "parry",
+      "target": "E4",
+      "to": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "E4"
+    },
+    {
+      "kind": "bell",
+      "to": {
+        "x": 5,
+        "y": 4
+      }
+    },
+    {
+      "kind": "sweep",
+      "to": {
+        "x": 5,
+        "y": 4
+      },
+      "targets": [
+        "E6"
+      ]
+    },
+    {
+      "kind": "end"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 4,
+        "y": 3
+      }
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "kind": "parry",
+      "target": "E1",
+      "to": {
+        "x": 3,
+        "y": 3
+      }
+    },
+    {
+      "kind": "vault",
+      "to": {
+        "x": 5,
+        "y": 3
+      }
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "shot",
+      "target": "E1"
+    },
+    {
+      "kind": "bell",
+      "to": {
+        "x": 3,
+        "y": 2
+      }
+    },
+    {
+      "kind": "shot",
+      "target": "E5"
+    },
+    {
+      "kind": "end"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 4,
+        "y": 2
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "E6"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 3,
+        "y": 1
+      }
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 4,
+        "y": 2
+      }
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 4,
+        "y": 1
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "E6"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 5,
+        "y": 2
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "E6"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 6,
+        "y": 2
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "E6"
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "E6"
+    }
+  ]
+}

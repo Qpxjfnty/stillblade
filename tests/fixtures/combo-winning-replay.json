@@ -1,0 +1,132 @@
+{
+  "scenario": "combo",
+  "expected": {
+    "phase": "victory",
+    "beats": 14,
+    "actions": 23,
+    "hp": 3,
+    "kills": 4,
+    "wounds": 5
+  },
+  "commands": [
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "A"
+    },
+    {
+      "kind": "bell",
+      "to": {
+        "x": 6,
+        "y": 5
+      }
+    },
+    {
+      "kind": "sweep",
+      "to": {
+        "x": 6,
+        "y": 5
+      },
+      "targets": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "kind": "break",
+      "target": "D"
+    },
+    {
+      "kind": "lance",
+      "target": "D"
+    },
+    {
+      "kind": "end"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "D"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 7,
+        "y": 2
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "D"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 7,
+        "y": 1
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "D"
+    },
+    {
+      "kind": "wait"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 8,
+        "y": 2
+      }
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 9,
+        "y": 1
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "D"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 9,
+        "y": 3
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "D"
+    },
+    {
+      "kind": "slip",
+      "to": {
+        "x": 9,
+        "y": 1
+      }
+    },
+    {
+      "kind": "harrier",
+      "target": "D"
+    },
+    {
+      "kind": "activate"
+    },
+    {
+      "kind": "lunge",
+      "target": "D"
+    }
+  ]
+}
