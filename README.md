@@ -9,7 +9,7 @@ Defend in a small Unicode arena. Evade and parry to erode enemy Guard and build 
 ## The combat loop
 
 1. Read the marked enemy commitments. Choose an action and target, inspect the forecast, then confirm.
-2. Slip, vault or turn aside attacks to gain charge. Enemy Guard recovers when left undamaged.
+2. Move, vault or turn aside attacks to gain charge. Light Attack chips 4 Guard from an adjacent enemy; Harrier Shot chips 3 at range. Enemy Guard recovers when left undamaged.
 3. At four charge or more, activate an attack turn. Every enemy is interrupted and takes two Guard damage.
 4. Breached enemies are stunned and vulnerable to one HP hit. A surviving enemy restores Guard and cannot be wounded again that attack turn.
 5. Spend the attack budget on a route through the crowd. HP hits refund one budget point; kills create fresh souls for immediate spells.
@@ -22,6 +22,8 @@ The initial encounter contains two swordsmen, two chargers, a gunner and a two-h
 The game is a static site with no account, download or server connection required after loading. Use a current browser on a phone, tablet or computer. Mouse, touch and keyboard follow the same select, preview and confirm flow. There are no reflex inputs. The in-game help lists the controls. Progress is saved locally when browser storage is available; blocked storage does not prevent play.
 
 Keyboard: **1–8** selects an action, **arrows** move the arena cursor, and **Space** selects a cell. **Enter** confirms the forecast. **F** previews freezing time, **E** previews ending the attack turn, **Escape** cancels, and **?** opens the field guide. Parry and Sweep select a stance before selecting enemies.
+
+Solid red arrows show committed attack lanes. Dashed cyan arrows show enemy movement if you Wait, then update to the exact movement for your selected action. Inspecting an enemy emphasizes its arrows. A corner dash means no attack this turn; the enemy may still approach. Hover or keyboard focus reveals control hints without advancing time.
 
 Violence is presented through cosmetic Unicode effects. Corpses and blood do not change collision or targeting. Reduced-motion preferences are respected.
 

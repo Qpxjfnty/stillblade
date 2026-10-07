@@ -1,0 +1,15 @@
+.hover-tooltip {
+  position: fixed;
+  z-index: 50;
+  max-width: min(340px, calc(100vw - 16px));
+  padding: 11px 14px;
+  border: 1px solid var(--brass-dark);
+  background: var(--surface-high);
+  color: var(--ink);
+  box-shadow: 0 6px 24px #0008;
+  font: 12px/1.6 var(--sans);
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+.hover-tooltip[hidden] { display: none; }
+body[data-phase="attack"] .hover-tooltip { border-color: var(--ice-dark); }

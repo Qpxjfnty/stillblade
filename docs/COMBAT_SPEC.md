@@ -79,9 +79,10 @@ Each accepted defensive action advances one combat beat. Inspection, aiming, can
 
 Action | Rule | Guard and charge
 --- | --- | ---
-Slip | Move 1 or 2 cells along a clear straight ray. | Each committed attack genuinely evaded loses 2 Guard; earn 1 total charge for the beat's evades.
+Move | Move 1 or 2 cells along a clear straight ray. | Each committed attack genuinely evaded loses 2 Guard; earn 1 total charge for the beat's evades.
 Turn Aside | Stay or step 1 cell, then parry one selected melee tell that would hit the destination and whose attacker is adjacent there. | Cancel that attack, deal 4 Guard to its attacker, earn 2 charge. Other attacks still resolve.
-Vault | Cross one adjacent living enemy to the empty cell immediately beyond it. May cross a breached enemy. | Uses the same evade reward as Slip. No cooldown in this first experiment.
+Vault | Cross one adjacent living enemy to the empty cell immediately beyond it. May cross a breached enemy. | Uses the same evade reward as Move. No cooldown in this first experiment.
+Light Attack | Strike one adjacent visible enemy with positive Guard. Stay in place; other commitments still resolve. | Deal 4 Guard. No charge and no interrupt unless it breaches.
 Harrier Shot | Shoot the first enemy on a clear ray up to 4 cells away. No ammunition resource. | Deal 3 Guard. No charge and no interrupt unless it breaches.
 Reserve spell | Cast Bell or Thread with reserve. It occupies the defensive action. | Effects below; a spell creates no charge by itself. Movement can earn the usual evade reward.
 Wait | Remain in place and let one beat resolve. | No reward for waiting. May be useful for aligning commitments.
@@ -297,6 +298,8 @@ If no attack or spell is legal, End Attack Turn remains available. A poor activa
 ### One board with two clear modes
 
 Keep the entire arena visible. Show four large player HP pips, the numerical charge bank and activation threshold in defensive time. In frozen time replace charge with the remaining attack budget, fresh souls and reserve. Label the current phase in words as well as color. Make End Attack Turn persistently accessible.
+
+Solid red arrows show the current committed attack footprints: a single sword strike, a warden's fan, or a gunner/charger lane. Dashed cyan arrows show movement from the same pure simulation used by the action forecast. Before selecting a command, label them "Movement if you Wait"; after selecting a valid command, update them to that command's exact movement. These arrows disappear while time is frozen. A corner dash marks an enemy with no committed attack, excluding breached or protected enemies. Such an enemy can still approach. Hover and keyboard focus reveal descriptive hints; inspecting an enemy emphasizes its arrows without advancing time.
 
 Every enemy displays a compact Guard bar with exact numbers, large HP pips, its pending intention and resolution number. Breached enemies show a broken-defense symbol and remaining exposure decisions. Protected survivors use a distinct unavailable marker. Neither blood red nor animation alone may carry critical state information.
 

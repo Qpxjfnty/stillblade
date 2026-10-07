@@ -13,3 +13,5 @@
 .cell.preview-path{background-color:#354a46}.path-mark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--ice);font-size:18px;pointer-events:none}.cell.spell-area{box-shadow:inset 0 0 0 1px #a4ded74d;background-color:#2d4444}.cell.spell-hit{box-shadow:inset 0 0 0 2px var(--ice)}.excluded-mark{position:absolute;right:3px;top:2px;font:12px var(--mono);color:var(--muted);background:var(--surface)}
 
 .actor-glyph{position:relative;z-index:10}.cell-stats,.cell-id,.tell-order,.you-label{z-index:11}.guard-track{z-index:10}
+
+.tell-order.idle-marker{color:var(--muted);background:#293439;font-size:11px;line-height:10px;min-width:10px;height:10px;font-weight:600}

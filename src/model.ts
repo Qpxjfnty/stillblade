@@ -2,7 +2,7 @@ export type Pos = { x: number; y: number };
 export type EnemyKind = 'swordsman' | 'charger' | 'gunner' | 'warden';
 export type Phase = 'defense' | 'attack' | 'victory' | 'defeat';
 export type ScenarioId = 'arena' | 'combo' | 'emergency' | 'lone' | 'pillars' | 'corner';
-export type ActionKind = 'slip' | 'parry' | 'vault' | 'harrier' | 'wait' | 'activate' | 'lunge' | 'shot' | 'sweep' | 'break' | 'traverse' | 'bell' | 'thread' | 'lance' | 'end';
+export type ActionKind = 'slip' | 'parry' | 'vault' | 'light' | 'harrier' | 'wait' | 'activate' | 'lunge' | 'shot' | 'sweep' | 'break' | 'traverse' | 'bell' | 'thread' | 'lance' | 'end';
 export interface Intent { cells: Pos[]; direction: Pos; damage: number; parryable: boolean; }
 export interface Enemy extends Pos { id: string; kind: EnemyKind; hp: number; maxHp: number; guard: number; maxGuard: number; exposure: number; protected: boolean; intent: Intent | null; }
 export interface Soul extends Pos { id: string; }

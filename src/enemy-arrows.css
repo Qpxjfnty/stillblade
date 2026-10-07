@@ -1,0 +1,32 @@
+.arena { position: relative; }
+.arena .cell { z-index: auto; }
+.enemy-arrows {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  pointer-events: none;
+}
+.enemy-arrow { color: var(--blood); opacity: .9; }
+.enemy-arrow.movement { color: var(--ice); }
+.enemy-arrow.subdued { opacity: .4; }
+.enemy-arrow.focused { opacity: 1; }
+.enemy-arrow path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.arrow-backing { stroke: #11171ae6; stroke-width: 5px; }
+.arrow-shaft, .arrow-head { stroke: currentColor; stroke-width: 2px; }
+.movement .arrow-shaft { stroke-dasharray: 4 4; }
+.focused .arrow-shaft, .focused .arrow-head { stroke-width: 2.5px; }
+.threat-mark, .stale-glyph, .endpoint-mark { z-index: 11; }
+.legend-arrow { font: 14px var(--mono); color: var(--blood); }
+.legend-arrow.movement { color: var(--ice); }
+@media (max-width: 430px) {
+  .arrow-backing { stroke-width: 4px; }
+  .arrow-shaft, .arrow-head { stroke-width: 1.5px; }
+  .focused .arrow-shaft, .focused .arrow-head { stroke-width: 2px; }
+}

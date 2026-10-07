@@ -236,7 +236,7 @@ function resolveDefense(c: Context, command: Command, validateOnly: boolean) {
   const s = c.s, start = pos(s.player), priorExposed = new Set(s.enemies.filter(e => e.exposure > 0).map(e => e.id));
   const committed = new Map(s.enemies.filter(e => e.intent).map(e => [e.id, copy(e.intent!)]));
   if (command.kind === 'slip') {
-    const path = straightPath(s, s.player, destination(command), 2); insist(path, 'Slip needs a clear straight path of 1 or 2 cells.'); move(c, path!, 'Slip');
+    const path = straightPath(s, s.player, destination(command), 2); insist(path, 'Move needs a clear straight path of 1 or 2 cells.'); move(c, path!, 'Move');
   } else if (command.kind === 'vault') {
     const path = vaultPath(s, destination(command)); insist(path, 'Vault crosses one adjacent enemy to the empty cell beyond.'); move(c, path!, 'Vault');
   } else if (command.kind === 'parry') {
@@ -245,6 +245,10 @@ function resolveDefense(c: Context, command: Command, validateOnly: boolean) {
     insist(e.intent?.parryable && e.intent.cells.some(p => same(p, to)) && distance(e, to) === 1, 'Choose a committed, adjacent melee attack that hits your destination.');
     if (!same(to, s.player)) move(c, [to], 'Turn Aside');
     e.intent = null; emit(c, 'info', `Parried ${e.id}; its committed attack is canceled.`, e); guardDamage(c, e, 4, 'parry'); gainCharge(c, 2, 'parry');
+  } else if (command.kind === 'light') {
+    const e = selectedEnemy(s, command);
+    insist(!e.protected && e.guard > 0 && distance(s.player, e) === 1 && visible(s, s.player, e), 'Light Attack needs an adjacent guarded, unprotected enemy.');
+    guardDamage(c, e, 4, 'Light Attack');
   } else if (command.kind === 'harrier') {
     const e = selectedEnemy(s, command); insist(projectileTarget(s, e, 4), 'Harrier Shot needs the first enemy on a clear ray within 4 cells.'); guardDamage(c, e, 3, 'Harrier Shot');
   } else if (command.kind === 'bell' || command.kind === 'thread') spell(c, command);
@@ -370,7 +374,7 @@ export function legalCommands(s: GameState): Command[] {
     for (const d of DIRECTIONS) for (const n of [1, 2]) candidates.push({ kind: 'slip', to: add(s.player, d, n) });
     for (const d of DIRECTIONS) candidates.push({ kind: 'vault', to: add(s.player, d, 2) });
     for (const e of s.enemies) {
-      candidates.push({ kind: 'harrier', target: e.id });
+      candidates.push({ kind: 'light', target: e.id }, { kind: 'harrier', target: e.id });
       for (const to of neighbors) candidates.push({ kind: 'parry', target: e.id, to });
     }
   } else {
@@ -395,7 +399,7 @@ export function legalCommands(s: GameState): Command[] {
   return candidates.filter(command => transition(s, command, true).ok);
 }
 export function commandLabel(command: Command): string {
-  const names: Record<Command['kind'], string> = { slip: 'Slip', parry: 'Turn Aside', vault: 'Vault', harrier: 'Harrier Shot', wait: 'Wait', activate: 'Activate Attack Turn', lunge: 'Lunge', shot: 'Execution Shot', sweep: 'Sweep', break: 'Break', traverse: 'Traverse', bell: 'Bell', thread: 'Thread', lance: 'Soul Lance', end: 'End Attack Turn' };
+  const names: Record<Command['kind'], string> = { slip: 'Move', parry: 'Turn Aside', vault: 'Vault', light: 'Light Attack', harrier: 'Harrier Shot', wait: 'Wait', activate: 'Activate Attack Turn', lunge: 'Lunge', shot: 'Execution Shot', sweep: 'Sweep', break: 'Break', traverse: 'Traverse', bell: 'Bell', thread: 'Thread', lance: 'Soul Lance', end: 'End Attack Turn' };
   return `${names[command.kind]}${command.target ? ` ${command.target}` : ''}${command.targets?.length ? ` ${command.targets.join(' + ')}` : ''}${command.to ? ` → (${command.to.x},${command.to.y})` : ''}`;
 }
 function makeEnemy(id: string, kind: EnemyKind, x: number, y: number, guard?: number): Enemy {
